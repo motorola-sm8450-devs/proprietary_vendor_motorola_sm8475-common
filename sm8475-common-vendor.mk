@@ -78,7 +78,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
-    vendor/motorola/sm8475-common/proprietary/vendor/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/android.hardware.security.keymint-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service-qti.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
@@ -90,10 +89,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init.embmssl_server.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.embmssl_server.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init.qdmastats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qdmastats.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
-    vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init.spdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.spdaemon.rc \
-    vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init.spuservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.spuservice.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
-    vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init.vendor.qti.spu@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.qti.spu@1.1-service.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init.vendor.wlan.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.wlan.rc \
     vendor/motorola/sm8475-common/proprietary/vendor/etc/init/init_thermal-engine-v2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine-v2.rc \
@@ -348,7 +344,6 @@ PRODUCT_PACKAGES += \
     libadsprpc \
     libapengine \
     libappclassifier \
-    libaualgo_foundation \
     libaudio_log_utils \
     libbacklight-calib \
     libbluetooth_audio_session_qti \
@@ -397,7 +392,6 @@ PRODUCT_PACKAGES += \
     libgdtap \
     libgrpc++_unsecure_prebuilt \
     libhdr_backlight_adapter \
-    libhdr_stub \
     libhdr_tm \
     libhdrdynamic \
     libhdrdynamicootf \
@@ -623,7 +617,6 @@ PRODUCT_PACKAGES += \
     sensors.moto \
     sensors.ssc \
     libasphere \
-    libmsstwrapper \
     libshoebox \
     libspeakerbundle \
     vendor.display.color@1.0 \
@@ -766,9 +759,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.qesdhal@1.1-impl \
     vendor.qti.qesdhal@1.1 \
     vendor.qti.qesdsys-V1-ndk_platform \
-    vendor.qti.spu@1.0 \
-    vendor.qti.spu@1.1 \
-    vendor.qti.spu@2.0 \
     bm2n00 \
     bm2n01 \
     bm2n02 \
@@ -777,49 +767,12 @@ PRODUCT_PACKAGES += \
     bm2n05 \
     bm2n06 \
     bm2n07 \
+    bm2n08 \
+    bm2n09 \
     bm2n10 \
     bm2n11 \
-    bm2n12 \
-    bm2n13 \
-    bm2n14 \
-    bm2n15 \
-    bm2n16 \
-    bm2n17 \
-    bm2n18 \
-    bm2n19 \
-    bm2n20 \
-    bm2n21 \
-    bm2n22 \
-    bm2n23 \
-    bm2n24 \
-    bm2n25 \
-    bm2n26 \
-    bm2n27 \
-    bm2n31 \
-    bm2n32 \
-    bm2n33 \
-    bm2n34 \
-    bm2n35 \
-    bm2n36 \
-    bm2n37 \
-    bm2n38 \
-    bm2n39 \
-    bm2n40 \
-    bm2n41 \
-    bm2n42 \
-    bm2n43 \
-    bm2n44 \
-    bm2n45 \
-    bm2n46 \
-    bm2n47 \
-    bm2n48 \
-    bm2n49 \
-    bm2n50 \
-    bm2n51 \
-    bm2n52 \
-    bm2n53 \
-    bm2n54 \
-    bm2n55 \
+    capi_v2_aptX_Classic \
+    capi_v2_aptX_HD \
     libDspIOProxy_skel \
     libQ6MSFR_manager_skel \
     libQnnHtpAltPrepV69Skel \
@@ -829,16 +782,27 @@ PRODUCT_PACKAGES += \
     libSuperSensor_skel \
     libVppFrcQnnHtp \
     libVppQnnHtp \
+    libadsp_jpege_skel \
+    libapn_dsp_skel \
+    libbitml_nsp_skel \
+    libbitml_nsp_v2_skel \
     libcalculator_skel \
+    libcamera_nn_skel \
     libcvpdsp_2_1 \
     libdspCV_skel \
     libdsp_streamer_binning \
+    libdsp_streamer_qvrcam_receiver \
     libevadsp_3_0 \
+    libeye_tracking_dsp_sample_skel \
     libfastcvadsp \
     libfastcvdsp_skel \
     libhalide_hexagon_remote_skel \
+    libmctfengine_skel \
     libmobilenet_dsp_frc \
     libmobilenet_dsp_frc_networks \
+    libqvr_3dof_tracker_skel \
+    libqvr_cam_dsp_driver_skel \
+    libqvr_dsp_driver_skel \
     libscveT2T_skel \
     libsnpe_dsp_v65_domains_v2_skel \
     libsnpe_dsp_v66_domains_v2_skel \
@@ -937,7 +901,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.drm@1.4-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
-    android.hardware.keymaster@4.0-strongbox-service-qti \
     android.hardware.keymaster@4.1-service-qti \
     android.hardware.security.keymint-service-qti \
     motorola.hardware.camera.desktop@2.0-service \
@@ -956,11 +919,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.soter@1.0-service \
     vendor.qti.media.c2@1.0-service \
     vendor.qti.media.c2audio@1.0-service \
-    vendor.qti.spu@1.1-service \
-    vendor.qti.spu@2.0-service \
     ims_rtp_daemon \
     imsdaemon \
-    init.qti.keymaster \
     init.qti.media \
     ipacm-diag \
     irsc_util \
@@ -997,11 +957,9 @@ PRODUCT_PACKAGES += \
     qtigetprop \
     qtisetprop \
     rmt_storage \
-    sec_nvm \
     sensors-qesdk \
     sensors.qti \
     shsusrd \
-    spdaemon \
     sscrpcd \
     tftp_server \
     thermal-engine-v2 \

@@ -5,50 +5,45 @@
     "1600"
   ],
   "licenseHardwareVersions": [
-    "0xA008"
+    "0xA001"
   ],
-  "licensePKHashes": [
-    "0x89982C50C870F625855B11AD62633D4A3F63094FD856D1B03954754E5349168E"
-  ],
-  "licenseeName": "oem_744_prj_MotorolaWidevine8475",
+  "licenseeName": "oem_744_prj_MotorolaWidevineSM8450",
   "features": [
     "CPZ"
   ],
   "featureBundles": [
     "Widevine"
   ],
-  "INCLUDE_EXPIRATION_EXTENSION": 1,
   "licenseExpirationPerpetual": true,
-  "deviceFileName": "1600-1601-no-exp-3301840177.pfm",
-  "licenseSerial": "66ddbedb701d037d287858ab0000017f6517d806"
+  "deviceFileName": "1600-1601-no-exp-3097347615.pfm",
+  "licenseSerial": "079250f4018abdcbfeefacdc0000017aedf0581f"
 }
 
 -----BEGIN CERTIFICATE-----
-MIIEnzCCA1OgAwIBAgIUZt2+23AdA30oeFirAAABf2UX2AYwQQYJKoZIhvcNAQEK
+MIIEcjCCAyagAwIBAgIUB5JQ9AGKvcv+76zcAAABeu3wWB8wQQYJKoZIhvcNAQEK
 MDSgDzANBglghkgBZQMEAgEFAKEcMBoGCSqGSIb3DQEBCDANBglghkgBZQMEAgEF
 AKIDAgEgMG8xJDAiBgNVBAoMG1F1YWxjb21tIFRlY2hub2xvZ2llcywgSW5jLjEq
 MCgGA1UECwwhUXVhbGNvbW0gQ3J5cHRvZ3JhcGhpYyBPcGVyYXRpb25zMRswGQYD
 VQQDDBJDSExTRSBTaWduaW5nIENlcnQwIBcNNzAwMTAxMDAwMDAxWhgPOTk5OTEy
-MzEyMzU5NTlaMH0xKTAnBgNVBAMMIG9lbV83NDRfcHJqX01vdG9yb2xhV2lkZXZp
-bmU4NDc1MSQwIgYDVQQKDBtRdWFsY29tbSBUZWNobm9sb2dpZXMsIEluYy4xKjAo
-BgNVBAsMIVF1YWxjb21tIENyeXB0b2dyYXBoaWMgT3BlcmF0aW9uczCCASAwCwYJ
-KoZIhvcNAQEBA4IBDwAwggEKAoIBAQD/////////////////////////////////
+MzEyMzU5NTlaMH8xKzApBgNVBAMMIm9lbV83NDRfcHJqX01vdG9yb2xhV2lkZXZp
+bmVTTTg0NTAxJDAiBgNVBAoMG1F1YWxjb21tIFRlY2hub2xvZ2llcywgSW5jLjEq
+MCgGA1UECwwhUXVhbGNvbW0gQ3J5cHRvZ3JhcGhpYyBPcGVyYXRpb25zMIIBIDAL
+BgkqhkiG9w0BAQEDggEPADCCAQoCggEBAP//////////////////////////////
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////AgMBAAGjgbww
-gbkwHwYDVR0jBBgwFoAUhxTpNzJ+vbYo/DBqYCQQMNi9524wDAYDVR0TAQH/BAIw
-ADAOBgNVHQ8BAf8EBAMCBaAwGQYJKwYBBAGLKQwBBAwAAAAAAAAGQQAABkAwFgYK
-KwYBBAGLKQsBAQQIAAAAAAAAAugwFgYKKwYBBAGLKQsBAgQIAAAAAAAAoAgwLQYJ
-KwYBBAGLKQwFBCCJmCxQyHD2JYVbEa1iYz1KP2MJT9hW0bA5VHVOU0kWjjBBBgkq
-hkiG9w0BAQowNKAPMA0GCWCGSAFlAwQCAQUAoRwwGgYJKoZIhvcNAQEIMA0GCWCG
-SAFlAwQCAQUAogMCASADggEBAK5QI8gf0gFfY+fNvDWueF3awJ2OO6Z4fpLAsK+f
-h8RMb2jkTb6B7dAQjlbAHdh7ay0bRVyt4uZzvQx0zBoF94OWcUaxi1phXQzgJC2o
-eHNqMpAouQZ+0FRM03TmX5jjCC7RZ2iLSRy1qrdfslnsz18tHc0QINtDUdXtsixm
-V4eqUN7OzL7Aw3dNUxYpLiA/2PedMQuNi8EcFHKrtXTzXjGBCX02+DHW9ccuVN7U
-rGnXvazMvRyhmeUjn1bztzBJ3Z9j0IlUj4CFRhqw5aNUrfB0GmFT1GrTR5vNU4b7
-NmP07B6C7VaO9fpsgEBUFa2scXmjegiocuNa24kTLsu8RD8=
+//////////////////////////////////////////////////////8CAwEAAaOB
+jTCBijAfBgNVHSMEGDAWgBSHFOk3Mn69tij8MGpgJBAw2L3nbjAMBgNVHRMBAf8E
+AjAAMA4GA1UdDwEB/wQEAwIFoDAZBgkrBgEEAYspDAEEDAAAAAAAAAZBAAAGQDAW
+BgorBgEEAYspCwEBBAgAAAAAAAAC6DAWBgorBgEEAYspCwECBAgAAAAAAACgATBB
+BgkqhkiG9w0BAQowNKAPMA0GCWCGSAFlAwQCAQUAoRwwGgYJKoZIhvcNAQEIMA0G
+CWCGSAFlAwQCAQUAogMCASADggEBAOqa8aLlsAhhdBn+uLJ0I/w6EnxvZYW7n5lT
+/W8aVsjrlav9lx/cIHvY+0w249mVlKheRL/wPuPTD5hdflMdw94OQP7CMt5csi1J
+dTzphsHa6xkBNtcAdiC5kUKPWPykJmnTD8C4fOM8sw4PgnEwUluU63e9BvnZDres
+Dg6T5zGfOnSRWq+yUU+fdXQBRXEoHW1i+Iswtx7ct0znhpNghiOYW79U1sD/yprG
+tpfAp3GpwousUFnElhZ3dd/9z1j0NmAG/vbaNaWXu2KgvdXDZEHS/6u4D+55dOkk
+bTptRJV0z/I+WbXptEBLcR1zNjKcPareJoupQJeKNsR9KQin8tM=
 -----END CERTIFICATE-----
 
 

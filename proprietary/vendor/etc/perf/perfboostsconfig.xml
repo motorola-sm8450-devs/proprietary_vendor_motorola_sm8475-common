@@ -34,8 +34,8 @@
         <!-- Type="1", main launch boost of 2sec -->
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="taro,cape"
-            Resources="0x40C00000, 0x1, 0x40804000, 2112, 0x40804100, 0xFFF, 0x40804200, 2131,
-                       0x40800000, 2112, 0x40800100, 0xFFF, 0x40800200, 2131, 0x41848000, 0x104410,
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
+                       0x40800000, 0x6E6, 0x40800100, 0xFFF, 0x40800200, 0x7CC, 0x41848000, 0x104410,
                        0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43460000, 0x30D400,
                        0x43458000, 0x193138, 0x4281C000, 2000" />
 
@@ -53,7 +53,6 @@
            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                       0x40800000, 1382, 0x40800100, 1363, 0x40800200, 1766" />
 
-
     <!--app lauch boost (disabling packing)-->
 
         <!-- Type="2", launch boost for disable packing 1.5sec -->
@@ -66,13 +65,13 @@
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- LLCCBW resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_PRIME resource opcode, value-->
-        <!-- GPU nap resource opcode, value-->
+        <!-- GPU_IDLE_TIMER resource opcode, value-->
 
         <!-- Type="2", launch boost for disable packing 1.5sec -->
         <Config
            Id="0x00001081" Type="2" Enable="true" Timeout="1500" Target="diwali"
            Resources="0x40400000, 0x1, 0x42C10000, 0x1, 0x4303C000, 0xC3500,
-                      0x41844000, 0x104410, 0x43458000, 0x193138, 0x4281C000, 1500" />
+                      0x41844000, 0xE3C88, 0x43458000, 0x193138, 0x4282C000, 1500" />
 
     <!-- config_enableLaunchBoostv3-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -173,17 +172,15 @@
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- LLCCBW resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_PRIME resource opcode, value-->
-        <!-- GPU nap resource opcode, value-->
-
-        <!-- SCHED_TASK_BOOST resource opcode, value-->
+        <!-- GPU_IDLE_TIMER resource opcode, value-->
         <!-- Type="7", main launch of 2sec -->
 
         <Config
             Id="0x00001081" Type="7" Enable="true" Target="diwali" Timeout="2000"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                       0x40800000, 1382, 0x40800100, 1363, 0x40800200, 1766, 0x40400000, 0x1,
-                      0x42C10000, 0x1, 0x4303C000, 0xC3500, 0x41844000, 0x104410, 0x43458000, 0x193138,
-                      0x4281C000, 1500, 0x40C80000, 0x0" />
+                      0x42C10000, 0x1, 0x4303C000, 0xC3500, 0x41844000, 0xE3C88, 0x43458000, 0x193138,
+                      0x4282C000, 1500" />
 
     <!--Lightning App Launch-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -223,6 +220,20 @@
                        0x40408000, 0x63,
                        0x40C74000, 0xF0" />
 
+    <!--Activity lauch boost-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
+
+        <Config
+           Id="0x00001081" Type="10" Enable="true" Timeout="2000" Target="diwali"
+           Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
+                      0x40800000, 1382, 0x40800100, 1363, 0x40800200, 1766" />
+
     <!--app launch boost (attach application) -->
         <!-- SCHED_TASK_BOOST resource opcode, value-->
         <Config
@@ -238,8 +249,8 @@
         <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
         <Config
             Id="0x00001083" Enable="true" Timeout="500"
-            Resources="0x40804000, 2112, 0x40804100, 0xFFF, 0x40804200, 2131,
-                       0x40800000, 2112, 0x40800100, 0xFFF, 0x40800200, 2131" />
+            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
+                       0x40800000, 0x6E6, 0x40800100, 0xFFF, 0x40800200, 0x7CC" />
 
     <!--Vertical Scroll boost-->
         <!-- LLCBW_MIN_FREQ resource opcode, value-->
@@ -260,17 +271,17 @@
         <!-- Type="1", Vertical Scroll boost -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="taro,cape" Fps="60"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 940, 0x40800200, 921,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="taro,cape" Fps="90"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 940, 0x40800200, 921,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="taro,cape" Fps="120"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 940, 0x40800200, 921,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
                        0x40CE0200, 0x0023000A" />
@@ -286,12 +297,13 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <!-- Type="1", Vertical Scroll boost -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="diwali"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1132, 0x40800100, 1094, 0x40800200, 1094,
-                       0x40C00000, 2" />
+                       0x40C00000, 2, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -300,11 +312,12 @@
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="diwali" Fps="90"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1651, 0x40800100, 1363, 0x40800200, 1766,
-                       0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27" />
+                       0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -316,12 +329,13 @@
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="diwali" Fps="120"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1804, 0x40800100, 1363, 0x40800200, 1977,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -335,12 +349,14 @@
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- LLCC_BW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value -->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="diwali" Fps="144"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1804, 0x40800100, 1363, 0x40800200, 1977,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x41844000, 0x104410, 0x43480000, 0xAAE60" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x41844000, 0xE3C88, 0x43480000, 0xAAE60,
+                       0x41848000, 0xE3C88" />
 
         <!--Horizontal Scroll boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -348,12 +364,13 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <!-- Type="2", Horizontal Scroll boost -->
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="diwali"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1132, 0x40800100, 1094, 0x40800200, 1094,
-                       0x40C00000, 2" />
+                       0x40C00000, 2, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -362,11 +379,12 @@
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="diwali" Fps="90"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1651, 0x40800100, 1363, 0x40800200, 1766,
-                       0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27" />
+                       0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -378,12 +396,13 @@
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="diwali" Fps="120"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1804, 0x40800100, 1363, 0x40800200, 1977,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -397,12 +416,14 @@
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- LLCC_BW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value -->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="diwali" Fps="144"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1804, 0x40800100, 1363, 0x40800200, 1977,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x41844000, 0x104410, 0x43480000, 0xAAE60" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x41844000, 0xE3C88, 0x43480000, 0xAAE60,
+                       0x41848000, 0xE3C88" />
 
     <!--Prefling Scroll boost-->
         <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
@@ -423,17 +444,17 @@
         <!-- Type="4", Prefling boost -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="taro,cape" Fps="60"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 940, 0x40800200, 921,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="taro,cape" Fps="90"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 940, 0x40800200, 921,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="taro,cape" Fps="120"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 940, 0x40800200, 921,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
                        0x40CE0200, 0x0023000A" />
@@ -449,11 +470,12 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="diwali"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1132, 0x40800100, 1094, 0x40800200, 1094,
-                       0x40C00000, 2" />
+                       0x40C00000, 2, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -462,11 +484,12 @@
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="diwali" Fps="90"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1651, 0x40800100, 1363, 0x40800200, 1766,
-                       0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27" />
+                       0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -478,12 +501,13 @@
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="diwali" Fps="120"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1804, 0x40800100, 1363, 0x40800200, 1977,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -497,12 +521,14 @@
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- LLCC_BW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value -->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="diwali" Fps="144"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1804, 0x40800100, 1363, 0x40800200, 1977,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x41844000, 0x104410, 0x43480000, 0xAAE60" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x41844000, 0xE3C88, 0x43480000, 0xAAE60,
+                       0x41848000, 0xE3C88" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -515,7 +541,7 @@
         <!-- Type="", MTP boost -->
         <Config
             Id="0x00001086" Enable="true" Target="taro,cape"
-            Resources="0x40C00000, 0x1, 0x40804000, 2112, 0x40804100, 0xFFF, 0x40800000, 1800,
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1800,
                        0x40800100, 1400, 0x40C48000,0x3F" />
 
         <!-- SCHEDBOOST resource opcode, value-->
@@ -534,7 +560,6 @@
                        0x40800000, 1382, 0x40800100, 1363, 0x40800200, 1766, 0x42C10000, 0x1" />
 
     <!--Drag boost-->
-        <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
@@ -551,23 +576,23 @@
         <!-- Type="1", Drag boost -->
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="taro,cape" Fps="60"
-            Resources="0x4303C000, 0x6E1B8, 0x40800000, 1000, 0x40800100, 940, 0x40800200, 921,
+            Resources="0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="taro,cape" Fps="90"
-            Resources="0x4303C000, 0x6E1B8, 0x40800000, 1000, 0x40800100, 940, 0x40800200, 921,
+            Resources="0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="taro,cape" Fps="120"
-            Resources="0x4303C000, 0x6E1B8, 0x40800000, 1000, 0x40800100, 940, 0x40800200, 921,
+            Resources="0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
                        0x40CE0200, 0x0023000A" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="taro,cape" Fps="144"
-            Resources="0x4303C000, 0x6E1B8, 0x40800000, 1300, 0x40800100, 1100, 0x40800200, 1300,
+            Resources="0x40800000, 1300, 0x40800100, 1100, 0x40800200, 1300,
                        0x40C00000, 0x2, 0x43458000, 0x114900, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
                        0x40CE0200, 0x0023000A" />
@@ -579,7 +604,8 @@
         <!-- Type="1", Drag boost -->
         <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="diwali"
-             Resources="0x40800000, 1132, 0x40800100, 1094, 0x40800200, 1094" />
+             Resources="0x40800000, 1132, 0x40800100, 1094, 0x40800200, 1094,
+                        0x41848000, 0xE3C88" />
 
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -587,16 +613,17 @@
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- LLCBW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value -->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="diwali" Fps="120"
              Resources="0x40800000, 1132, 0x40800100, 1094, 0x40800200, 1094, 0x40C00000, 2,
-                        0x4303C000, 0xA6428, 0x43480000, 0xAAE60" />
+                        0x4303C000, 0xA6428, 0x43480000, 0xAAE60, 0x41848000, 0xE3C88" />
 
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="diwali" Fps="144"
              Resources="0x40800000, 1132, 0x40800100, 1094, 0x40800200, 1094, 0x40C00000, 2,
-                        0x4303C000, 0xA6428, 0x43480000, 0x114900" />
+                        0x4303C000, 0xA6428, 0x43480000, 0x114900, 0x41848000, 0xE3C88" />
 
     <!--PackageInstall boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -612,8 +639,8 @@
 
         <Config
             Id="0x00001088" Enable="true" Target="taro,cape"
-            Resources="0x40C00000, 0x2, 0x40804000, 2112, 0x40804100, 0xFFF, 0x40804200, 2131,
-                       0x40800000,2112, 0x40800100,0xFFF, 0x40800200, 2131, 0x40CA0000, 0,
+            Resources="0x40C00000, 0x2, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
+                       0x40800000,0x6E6, 0x40800100,0xFFF, 0x40800200, 0x7CC, 0x40CA0000, 0,
                        0x40CCC000, 0" />
 
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
@@ -644,8 +671,8 @@
 
         <Config
             Id="0x00001089" Enable="true" Timeout="1500"
-            Resources="0x40C00000, 0x1, 0x40804000, 2112, 0x40804100, 0xFFF, 0x40804200, 2131,
-                       0x40800000,2112, 0x40800100,0xFFF, 0x40800200,2131" />
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
+                       0x40800000,0x6E6, 0x40800100,0xFFF, 0x40800200, 0x7CC" />
 
     <!--Rotation animation boost-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
@@ -906,11 +933,11 @@
                 Id="0x00001098" Type="0" Enable="true" Target="taro,cape" Timeout="2000" Fps="240"
                 Resources="0x42C20000, 1, 0x4281C000, 7, 0x41C0C000, 0" />
 
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_IDLE_TIMER resource opcode, value-->
         <!-- DISPLAY EARLY WAKEUP opcode, value-->
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="diwali" Timeout="2000"
-                Resources="0x4281C000, 32, 0x41C0C000, 0" />
+                Resources="0x4282C000, 32, 0x41C0C000, 0" />
 
     <!-- PiCard Early Wakeup GPU only -->
         <!-- 60, 90fps: CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
@@ -935,10 +962,10 @@
                 Id="0x00001099" Type="0" Enable="true" Target="taro,cape" Timeout="2000" Fps="240"
                 Resources="0x42C20000, 1, 0x4281C000, 7" />
 
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_IDLE_TIMER resource opcode, value-->
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="diwali" Timeout="2000"
-                Resources="0x4281C000, 32" />
+                Resources="0x4282C000, 32" />
 
     <!-- PiCard Early Wakeup Display only -->
         <!-- 60, 90fps: CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
@@ -1002,15 +1029,16 @@
         <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
-
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <Config
-            Id="0x00001080" Type="5" Enable="true" Target="diwali" Fps="60"
-            Resources="0x40C00000, 2, 0x40C78000, 0, 0x40C7C000, 0" />
-
+            Id="0x00001080" Type="5" Enable="true" Target="diwali"
+            Resources="0x40C00000, 2, 0x40C78000, 0, 0x40C7C000, 0,
+            0x41848000, 0xE3C88" />
 
         <Config
             Id="0x00001080" Type="5" Enable="true" Target="diwali" Fps="90, 120, 144, 180"
-            Resources="0x40C00000, 2, 0x40800000, 940, 0x40C78000, 0, 0x40C7C000, 0" />
+            Resources="0x40C00000, 2, 0x40800000, 940, 0x40C78000, 0, 0x40C7C000, 0,
+            0x41848000, 0xE3C88" />
 
         <!-- Type 6 Medium Scrolls : Horizontal and Verical -->
         <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
@@ -1023,18 +1051,18 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- CORE_CTL_ENABLE_BIG resource opcode, value-->
-
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <Config
-            Id="0x00001080" Type="6" Enable="true" Target="diwali" Fps="60"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1382, 0x40C00000, 2, 0x41000000, 3,
-                       0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0, 0x40C74000, 0xF0,
-                       0x40408000, 0x27, 0x41008000, 0" />
+            Id="0x00001080" Type="6" Enable="true" Target="diwali"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1382, 0x40C00000, 2,
+                       0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
+                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x41848000, 0xE3C88" />
 
         <Config
             Id="0x00001080" Type="6" Enable="true" Target="diwali" Fps="90, 120, 144, 180"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1382, 0x40C00000, 2, 0x41000000, 3,
-                       0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0, 0x40C74000, 0xF0,
-                       0x40408000, 0x27, 0x41008000, 0" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1382, 0x40C00000, 2,
+                       0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
+                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x41848000, 0xE3C88" />
 
         <!-- Type 7 Heavy Scrolls : Horizontal and Verical -->
         <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
@@ -1048,19 +1076,20 @@
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- CORE_CTL_ENABLE_BIG resource opcode, value-->
         <!-- CORE_CTL_ENABLE_PRIME  resource opcode, value-->
-        <!-- ASYMCAP_BOOST resource opcode, value-->
-
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <Config
-            Id="0x00001080" Type="7" Enable="true" Target="diwali" Fps="60"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1651, 0x40C00000, 2, 0x41000000, 3,
-                       0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0, 0x40C74000, 0xF0,
-                       0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0, 0x43C00000, 1" />
+            Id="0x00001080" Type="7" Enable="true" Target="diwali"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1651, 0x40C00000, 2,
+                       0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
+                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0,
+                       0x41848000, 0xE3C88" />
 
         <Config
             Id="0x00001080" Type="7" Enable="true" Target="diwali" Fps="90, 120, 144, 180"
-            Resources="0x4303C000, 0xA6428, 0x40800000, 1651, 0x40C00000, 2, 0x41000000, 3,
-                       0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0, 0x40C74000, 0xF0,
-                       0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0, 0x43C00000, 1" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1651, 0x40C00000, 2,
+                       0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
+                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0,
+                       0x41848000, 0xE3C88" />
 
     </PerfBoost>
 </BoostConfigs>
