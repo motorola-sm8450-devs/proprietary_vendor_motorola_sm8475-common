@@ -759,59 +759,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.qesdhal@1.1-impl \
     vendor.qti.qesdhal@1.1 \
     vendor.qti.qesdsys-V1-ndk_platform \
-    bm2n00 \
-    bm2n01 \
-    bm2n02 \
-    bm2n03 \
-    bm2n04 \
-    bm2n05 \
-    bm2n06 \
-    bm2n07 \
-    bm2n08 \
-    bm2n09 \
-    bm2n10 \
-    bm2n11 \
-    capi_v2_aptX_Classic \
-    capi_v2_aptX_HD \
-    libDspIOProxy_skel \
-    libQ6MSFR_manager_skel \
-    libQnnHtpAltPrepV69Skel \
-    libQnnHtpV69Skel \
-    libSnpeHtpV68Skel \
-    libSnpeHtpV69Skel \
-    libSuperSensor_skel \
-    libVppFrcQnnHtp \
-    libVppQnnHtp \
-    libadsp_jpege_skel \
-    libapn_dsp_skel \
-    libbitml_nsp_skel \
-    libbitml_nsp_v2_skel \
-    libcalculator_skel \
-    libcamera_nn_skel \
-    libcvpdsp_2_1 \
-    libdspCV_skel \
-    libdsp_streamer_binning \
-    libdsp_streamer_qvrcam_receiver \
-    libevadsp_3_0 \
-    libeye_tracking_dsp_sample_skel \
-    libfastcvadsp \
-    libfastcvdsp_skel \
-    libhalide_hexagon_remote_skel \
-    libmctfengine_skel \
-    libmobilenet_dsp_frc \
-    libmobilenet_dsp_frc_networks \
-    libqvr_3dof_tracker_skel \
-    libqvr_cam_dsp_driver_skel \
-    libqvr_dsp_driver_skel \
-    libscveT2T_skel \
-    libsnpe_dsp_v65_domains_v2_skel \
-    libsnpe_dsp_v66_domains_v2_skel \
-    libtracker_6dof_skel_8250 \
-    libtracker_6dof_skel_8350 \
-    libvpp_ais_networks \
-    libvpp_vqa_networks \
-    libvpt_action_recognition \
-    libworker_pool \
     com.qualcomm.qti.dpm.api@1.0 \
     lib-imsvideocodec \
     lib-imsvt \
